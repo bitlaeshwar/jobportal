@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WELCOME User</title>
+  <style>
+    :root{
+      --bg: #0f172a;
+      --panel: #111827cc;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --brand: #6366f1;
+      --brand-600: #4f46e5;
+      --radius: 14px;
+      --shadow: 0 8px 20px rgba(0,0,0,.35);
+    }
+
+    body{
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background:
+        radial-gradient(1000px 600px at 10% -10%, #1d4ed833, transparent 60%),
+        radial-gradient(800px 500px at 110% 20%, #7c3aed33, transparent 60%),
+        radial-gradient(700px 500px at 50% 120%, #22d3ee22, transparent 60%),
+        var(--bg);
+      font-family: system-ui, sans-serif;
+      color: var(--text);
+      padding: 20px;
+    }
+
+    h1{
+      font-size: clamp(26px, 4vw, 40px);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    input[type="text"]{
+      width: 100%;
+      max-width: 320px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.15);
+      background: rgba(17,24,39,.6);
+      color: var(--text);
+      font-size: 16px;
+      box-shadow: var(--shadow);
+      transition: border .2s ease, box-shadow .2s ease;
+    }
+
+    input[type="text"]:focus{
+      outline: none;
+      border: 1px solid var(--brand);
+      box-shadow: 0 0 0 .2rem rgba(99,102,241,.45);
+    }
+  </style>
+</head>
+<body>
+  <h1>This is Student page and go apply for job</h1>
+  <input type="text" placeholder="Enter text here..." />
+</body>
+</html>

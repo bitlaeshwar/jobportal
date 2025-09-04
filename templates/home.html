@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Portal App</title>
+  <style>
+    :root{
+      --bg: #0f172a;
+      --panel: #111827cc;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --brand: #6366f1;
+      --brand-600: #4f46e5;
+      --radius: 14px;
+      --shadow: 0 8px 20px rgba(0,0,0,.35);
+      --ring: 0 0 0 .2rem rgba(99,102,241,.45);
+    }
+
+    body{
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background:
+        radial-gradient(1000px 600px at 10% -10%, #1d4ed833, transparent 60%),
+        radial-gradient(800px 500px at 110% 20%, #7c3aed33, transparent 60%),
+        radial-gradient(700px 500px at 50% 120%, #22d3ee22, transparent 60%),
+        var(--bg);
+      font-family: system-ui, sans-serif;
+      color: var(--text);
+      padding: 30px;
+      text-align: center;
+    }
+
+    h1{
+      margin: 10px 0;
+      font-size: clamp(28px, 5vw, 44px);
+    }
+
+    h2{
+      margin: 6px 0 14px;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    button{
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 12px 0;
+      border: none;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--brand), var(--brand-600));
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform .08s ease, filter .2s ease;
+      box-shadow: 0 8px 20px rgba(79,70,229,.35);
+    }
+
+    button:hover{
+      filter: brightness(1.05);
+    }
+
+    button:active{
+      transform: translateY(1px);
+    }
+
+    button h2{
+      margin: 0;
+      font: inherit;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <h1>JOB PORTAL APP</h1>
+
+  <h1>Already a user</h1>
+  <button onclick="window.location.href='/login'"><h2>Login</h2></button><br>
+
+  <h1>Login For Admin</h1>
+  <button onclick="window.location.href='/signup'"><h2>Post Job as Admin</h2></button><br>
+
+  <h2>Want to apply for a job?</h2>
+  <button onclick="window.location.href='/signup'"><h2>Apply For Job</h2></button>
+</body>
+</html>
